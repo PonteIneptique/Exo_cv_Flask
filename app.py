@@ -3,7 +3,7 @@ from flask import Flask, render_template
 #Nom de l'application (obligatoire)
 app = Flask(__name__)
 
-#Données utilisées par l'application. Syntaxe permettant de rendre la variable 'data' accessible partout avec Jinja (sinon on a un 'data not defined'
+#Données utilisées par l'application. Syntaxe permettant de rendre la variable 'data' accessible partout avec Jinja (sinon on a un 'data not defined')
 app.jinja_env.globals['data'] = [
     {
         "diplome": "bac ES",
@@ -46,12 +46,16 @@ app.jinja_env.globals['data'] = [
         "lieu": "Centre sportif de Bougival",
     },
 ]
-#Chemin vers la page d'accueil
+
+#Instanciation des différents chemins URL disponibles dans l'app.
+
+#Chemin vers la page d'accueil (démarrage et retour au menu)
 @app.route("/")
 def index():
     return render_template("index.html")
 
-#Chemin vers la page 'variable' qui change selon les boutons cliqués. Le chemin sera sous la forme variable/nombre.
+#Chemin vers la page 'variable' qui change selon les boutons cliqués. Le chemin sera sous la forme variable/nombre (place_id).
+#La valeur de place_id est définie selon le bouton cliqué.
 @app.route("/variable/<int:place_id>")
 def variable(place_id):
     return render_template("variable.html", place_id=place_id)
