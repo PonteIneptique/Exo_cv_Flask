@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block variable%}
+<!-- Insertion des informations relativement à la valeur de place_id -->
+{% if place_id == 0 %}
+<p class="title is-1 is-spaced">Masters</p>
+<section class="section">
+    <table class="table">
+
+    <tbody>
+    <tr><td>Diplôme</td><td>{{data[4].diplome}}</td></tr>
+    <tr><td>Année</td><td>{{data[4].annee}}</td></tr>
+    <tr><td>Lieu</td><td>{{data[4].lieu}}</td></tr>
+    </tbody>
+
+</table>
+</section>
+<section class="section">
+    <table class="table">
+
+    <tbody>
+    <tr><td>Diplôme</td><td>{{data[3].diplome}}</td></tr>
+    <tr><td>Année</td><td>{{data[3].annee}}</td></tr>
+    <tr><td>Lieu</td><td>{{data[3].lieu}}</td></tr>
+    </tbody>
+
+</table>
+</section>
+
+{% elif place_id == 1 %}
+<p class="title is-1 is-spaced">Licences</p>
+<section class="section">
+    <table class="table">
+
+    <tbody>
+    <tr><td>Diplôme</td><td>{{data[2].diplome}}</td></tr>
+    <tr><td>Année</td><td>{{data[2].annee}}</td></tr>
+    <tr><td>Lieu</td><td>{{data[2].lieu}}</td></tr>
+    </tbody>
+
+</table>
+</section>
+<section class="section">
+    <table class="table">
+
+    <tbody>
+    <tr><td>Diplôme</td><td>{{data[1].diplome}}</td></tr>
+    <tr><td>Année</td><td>{{data[1].annee}}</td></tr>
+    <tr><td>Lieu</td><td>{{data[1].lieu}}</td></tr>
+    </tbody>
+
+</table>
+</section>
+
+{% elif place_id == 2 %}
+
+<p class="title is-1 is-spaced">Secondaire</p>
+<section class="section">
+    <table class="table">
+
+    <tbody>
+    <tr><td>Diplôme</td><td>{{data[0].diplome}}</td></tr>
+    <tr><td>Année</td><td>{{data[0].annee}}</td></tr>
+    <tr><td>Lieu</td><td>{{data[0].lieu}}</td></tr>
+    </tbody>
+
+</table>
+</section>
+
+{% elif place_id == 3 %}
+
+<p class="title is-1 is-spaced">Stage</p>
+<section class="section">
+    <table class="table">
+
+    <tbody>
+    <tr><td>Diplôme</td><td>{{data[5].emploi}}</td></tr>
+    <tr><td>Année</td><td>{{data[5].annee}}</td></tr>
+    <tr><td>Lieu</td><td>{{data[5].lieu}}</td></tr>
+    </tbody>
+
+</table>
+</section>
+
+{% elif place_id == 4 %}
+
+<p class="title is-1 is-spaced">Jobs étudiants</p>
+<section class="section">
+    <table class="table">
+
+    <tbody>
+    <tr><td>Diplôme</td><td>{{data[7].emploi}}</td></tr>
+    <tr><td>Année</td><td>{{data[7].annee}}</td></tr>
+    <tr><td>Lieu</td><td>{{data[7].lieu}}</td></tr>
+    </tbody>
+
+</table>
+</section>
+
+<section class="section">
+    <table class="table">
+
+    <tbody>
+    <tr><td>Diplôme</td><td>{{data[6].emploi}}</td></tr>
+    <tr><td>Année</td><td>{{data[6].annee}}</td></tr>
+    <tr><td>Lieu</td><td>{{data[6].lieu}}</td></tr>
+    </tbody>
+
+</table>
+</section>
+
+{% endif%}
+{% endblock %}
+{% block footer%}
+<footer class="footer"><a href="{{url_for('index')}}">Retour au menu</a></footer>
+{% endblock%}

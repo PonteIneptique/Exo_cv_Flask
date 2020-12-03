@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block header%}
+<header>
+    <h1 class="title">Bienvenue sur le CV de Victor</h1>
+    <h2 class="subtitle">Cliquez sur les liens pour naviguer</h2>
+</header>
+{% endblock%}
+{% block tableaux%}
+<section class="section">
+<table class="table">
+    <thead>Formation</thead>
+    <tbody>
+    <tr><td>Masters</td><td><a class="button" href="{{url_for('variable', place_id=0)}}">Cliquez ici</a></td></tr>
+    <tr><td>Licences</td><td><a class="button" href="{{url_for('variable', place_id=1)}}">Cliquez ici</a></td></tr>
+    <tr><td>Secondaire</td><td><a class="button" href="{{url_for('variable', place_id=2)}}">Cliquez ici</a></td></tr>
+    </tbody>
+</table>
+</section>
+<section class="section">
+<table class="table">
+    <thead>Expériences</thead>
+    <tbody>
+    <tr><td>Stage</td><td><a class="button" href="{{url_for('variable', place_id=3)}}">Cliquez ici</a></td></tr>
+    <tr><td>Jobs étudiants</td><td><a class="button" href="{{url_for('variable', place_id=4)}}">Cliquez ici</a></td></tr>
+    </tbody>
+</table>
+</section>
+{% endblock %}
